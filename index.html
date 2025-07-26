@@ -690,34 +690,40 @@
       font-size: 2rem;
     }
 
-    /* Gallery Preview */
     .gallery-section {
-      padding: 5rem 0;
-      background: #f8fafc;
-    }
+  padding: 5rem 0;
+  background: #f8fafc;
+}
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
 
-    .gallery-item {
-      aspect-ratio: 1;
-      background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #64748b;
-      font-size: 3rem;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      width: 100%;
-  height: 200px;
+.gallery-item {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden; /* ইমেজ ছাড়িয়ে গেলে কেটে ফেলার জন্য */
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
- 
-    }
+  border-radius: 16px;
+}
 
     .gallery-item:hover {
       transform: scale(1.05);
@@ -2181,16 +2187,16 @@
           
           <div class="gallery-grid">
             <div class="gallery-item">
-              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVXNbjbdlyDURIWNORHm0pxCSWQ6MrkEhlIvd4siMVjvoph3w4Z0Ep544w5ft9OVl2WAsisvWoLLutc38XUk1UUwnA9IqJuA29ZX_k3SeOLhjKTFK3IvIV10XFBHotOM2ejSeG2Dw5VXXcn1oMjt7aWQBcgRi8Td5qfBnUpe6U-cckAdP8SsoeWLW1OYA/s1280/photo_2025-07-25_08-26-08.jpg" alt="স্কুল">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVXNbjbdlyDURIWNORHm0pxCSWQ6MrkEhlIvd4siMVjvoph3w4Z0Ep544w5ft9OVl2WAsisvWoLLutc38XUk1UUwnA9IqJuA29ZX_k3SeOLhjKTFK3IvIV10XFBHotOM2ejSeG2Dw5VXXcn1oMjt7aWQBcgRi8Td5qfBnUpe6U-cckAdP8SsoeWLW1OYA/s1600/photo_2025-07-25_08-26-08.jpg" alt="স্কুল">
             </div>
             <div class="gallery-item">
-              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTtxJxztWnaGWCN-LFdpN30lh04DxztZX-n7zzq_B4npwCzop0eJbN4FGqFg5kDs_7DpRnGF4ELYo5yoo_RrtFQvMP07l8ZzXf63kpjEVLz1NYUKpOWMJUAj8_yIt0qlhjOKwy0-zXssKLgwFD0a7whS9adjrB1_t8KAn3nlCWycsu1YjwAdOfrL0o-M4/s320/photo_2025-07-25_08-26-44.jpg" alt="স্কুল">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTtxJxztWnaGWCN-LFdpN30lh04DxztZX-n7zzq_B4npwCzop0eJbN4FGqFg5kDs_7DpRnGF4ELYo5yoo_RrtFQvMP07l8ZzXf63kpjEVLz1NYUKpOWMJUAj8_yIt0qlhjOKwy0-zXssKLgwFD0a7whS9adjrB1_t8KAn3nlCWycsu1YjwAdOfrL0o-M4/s1600/photo_2025-07-25_08-26-44.jpg" alt="স্কুল">
             </div>
             <div class="gallery-item">
-             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggRRSW1G-1ArUpEnaVr345bVVyXbprGrhYKK2XrdXN4gPSeQIil11GIqeHxsCh7Nc5ZwXmfqfXdUkr1BwjcJGr4eZsuP6ZYn29eD59g4K5jIh345jtFrTDC77BWN9llksYhE5doEQhrhGFzciicVbA1FdpxVKpoDCLIMYyJGjqneOREvjInkcyKnZ05hs/s320/photo_2025-07-25_08-26-23.jpg" alt="স্কুল">
+             <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggRRSW1G-1ArUpEnaVr345bVVyXbprGrhYKK2XrdXN4gPSeQIil11GIqeHxsCh7Nc5ZwXmfqfXdUkr1BwjcJGr4eZsuP6ZYn29eD59g4K5jIh345jtFrTDC77BWN9llksYhE5doEQhrhGFzciicVbA1FdpxVKpoDCLIMYyJGjqneOREvjInkcyKnZ05hs/s1600/photo_2025-07-25_08-26-23.jpg" alt="স্কুল">
             </div>
             <div class="gallery-item">
-              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiou_XbJF2z79LWXRtbl8TYhlNDN0sWmxmHP6a2W8w0zloVOA1KY9G1wbOL1DEvOovQ57q3VacWzIfh-h0YF3QNLy8vPRhQD5Jq0kYdW6ow4nmHy2idfFcM4kKfzPE0pIuETh5d2jbiAfc3_NGbXoZjIA-e73gsI0I32kMSHep6jtlIDGBUUbj0ZjJymOQ/s320/photo_2025-07-25_08-26-32.jpg" alt="স্কুল">
+              <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiou_XbJF2z79LWXRtbl8TYhlNDN0sWmxmHP6a2W8w0zloVOA1KY9G1wbOL1DEvOovQ57q3VacWzIfh-h0YF3QNLy8vPRhQD5Jq0kYdW6ow4nmHy2idfFcM4kKfzPE0pIuETh5d2jbiAfc3_NGbXoZjIA-e73gsI0I32kMSHep6jtlIDGBUUbj0ZjJymOQ/s1600/photo_2025-07-25_08-26-32.jpg" alt="স্কুল">
             </div>
           </div>
         </div>
@@ -2315,7 +2321,7 @@
           <div class="leadership-grid">
             <div class="leader-card">
               <div class="leader-image">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbUz1rTlO8yqmtwpYhgxqJ6iOvb_NPQu0iZ-QqoHBV6dZ2DXjqMF5COFinNXGm2NuspDzbfIYZtWj2EsvM1GVJkx3sw1wPE_WzY5ODZp12MvMnOqrSfC-f2VbpXT0adyJ7rCjnD1M30MEobIzlVUXiync-uT9kNj5CrX996gNA60WskgfsZZnrPL5q3ss/s320/photo_2025-07-25_06-20-19.jpg" alt="মুস্তাকিম মাহাদি" style="width: 100%; height: auto; border-radius: 50%;">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbUz1rTlO8yqmtwpYhgxqJ6iOvb_NPQu0iZ-QqoHBV6dZ2DXjqMF5COFinNXGm2NuspDzbfIYZtWj2EsvM1GVJkx3sw1wPE_WzY5ODZp12MvMnOqrSfC-f2VbpXT0adyJ7rCjnD1M30MEobIzlVUXiync-uT9kNj5CrX996gNA60WskgfsZZnrPL5q3ss/s1600/photo_2025-07-25_06-20-19.jpg" alt="মুস্তাকিম মাহাদি" style="width: 100%; height: auto; border-radius: 50%;">
               </div>
               <h3>মুস্তাকিম মাহাদি</h3>
               <p class="position">প্রধান শিক্ষক</p>
@@ -2325,7 +2331,7 @@
 
             <div class="leader-card">
               <div class="leader-image">
-               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhY5WzyUSyg7vHE3O6wB21gga1YYwOuVNpUKsvg1CpUD20RDBkCR5GFo_XBmFlHnRvKFdiDSCZ58VGVSlJFt6RQWjEb8ALLotD5ap_tjhBpy6oXYbyWoM7cB_4fD5vSs8GIiIXmZca67ZD9HM39m1wTP-mtstMpR9sq1f7DXPti5xEW2w-Qt6vleKVu38k/s320/photo_2025-07-25_06-15-58.jpg" alt="মানতাশা রহমান" style="width: 100%; height: auto; border-radius: 50%;">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhY5WzyUSyg7vHE3O6wB21gga1YYwOuVNpUKsvg1CpUD20RDBkCR5GFo_XBmFlHnRvKFdiDSCZ58VGVSlJFt6RQWjEb8ALLotD5ap_tjhBpy6oXYbyWoM7cB_4fD5vSs8GIiIXmZca67ZD9HM39m1wTP-mtstMpR9sq1f7DXPti5xEW2w-Qt6vleKVu38k/s1600/photo_2025-07-25_06-15-58.jpg" alt="মানতাশা রহমান" style="width: 100%; height: auto; border-radius: 50%;">
               </div>
               <h3>মানতাশা রহমান</h3>
               <p class="position">সহকারী প্রধান শিক্ষক</p>
@@ -2388,7 +2394,7 @@
             <div class="teacher-card">
               <div class="teacher-image">
                 <div class="teacher-id">T-001</div>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsmPhDT6L9AJcdBLjtFMN5rKLUzjlfYutDoi8naHVO3YvgUVa11gbZUwB6rh-QmqnIM_iMS6pJdQVvGPWJ-pO4y5PMHwsZ7Cr9V2mz_xsvE1TO49sVna40uGCNa3MLooAhTIWu_yxldPBsXYIPXK0Da0g9y_GvXAOCPrzR0tpUwh_FXPaLM_n6guF3l0g/s591/photo_2025-07-25_06-15-58%20(6).jpg" alt="Teacher Photo" class="teacher-img">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsmPhDT6L9AJcdBLjtFMN5rKLUzjlfYutDoi8naHVO3YvgUVa11gbZUwB6rh-QmqnIM_iMS6pJdQVvGPWJ-pO4y5PMHwsZ7Cr9V2mz_xsvE1TO49sVna40uGCNa3MLooAhTIWu_yxldPBsXYIPXK0Da0g9y_GvXAOCPrzR0tpUwh_FXPaLM_n6guF3l0g/s1600/photo_2025-07-25_06-15-58%20(6).jpg" alt="Teacher Photo" class="teacher-img">
               </div>
               <div class="teacher-info">
                 <h3>মোঃ কামাল হোসেন</h3>
@@ -2409,7 +2415,7 @@
             <div class="teacher-card">
               <div class="teacher-image">
                 <div class="teacher-id">T-002</div>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-1AhK_bjokSlHBIz6GXq8UcWU5LemQoP-w-GQtfD_VsWTpg9cFruJcoxiJyfKD8IChLmHd2YBnegpHo9C8RobL-tA1mkm6xCcmiIFVulnBq68E1oQtGUaDCs6qsLaA-pNM5Zt1YT33rk1tT8gWak_Zn3EpxaXAtClZPdPltKfzKhp-28adqxPGw_8FzM/s320/photo_2025-07-26_01-44-01.jpg" alt="Teacher Photo" class="teacher-img">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-1AhK_bjokSlHBIz6GXq8UcWU5LemQoP-w-GQtfD_VsWTpg9cFruJcoxiJyfKD8IChLmHd2YBnegpHo9C8RobL-tA1mkm6xCcmiIFVulnBq68E1oQtGUaDCs6qsLaA-pNM5Zt1YT33rk1tT8gWak_Zn3EpxaXAtClZPdPltKfzKhp-28adqxPGw_8FzM/s1600/photo_2025-07-26_01-44-01.jpg" alt="Teacher Photo" class="teacher-img">
               </div>
               <div class="teacher-info">
                 <h3>মিসেস নাসরিন আক্তার</h3>
@@ -2430,7 +2436,7 @@
             <div class="teacher-card">
               <div class="teacher-image">
                 <div class="teacher-id">T-003</div>
-               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBwd2o68sV0s55dKrPBpjn7UY74CwSTTHG6DKXrGgqafXtyXZ02M3If7Jr5p0Q5TlXMFxiflXTi9cIVYrMxTCeQUNo_X3i_XI8vvsAkEoO1nPkC8230LxsLikwtSn1BqtfDjVhsKOpneTxNWpupCfC5Jmi21in74JGxHAYAjgksKe_7XHcPHDYrFk0iQE/s320/photo_2025-07-25_06-15-58%20%284%29.jpg" alt="Teacher Photo" class="teacher-img">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBwd2o68sV0s55dKrPBpjn7UY74CwSTTHG6DKXrGgqafXtyXZ02M3If7Jr5p0Q5TlXMFxiflXTi9cIVYrMxTCeQUNo_X3i_XI8vvsAkEoO1nPkC8230LxsLikwtSn1BqtfDjVhsKOpneTxNWpupCfC5Jmi21in74JGxHAYAjgksKe_7XHcPHDYrFk0iQE/s1600/photo_2025-07-25_06-15-58%20%284%29.jpg" alt="Teacher Photo" class="teacher-img">
               </div>
               <div class="teacher-info">
                 <h3>মোঃ আলী হাসান</h3>
@@ -2451,7 +2457,7 @@
             <div class="teacher-card">
               <div class="teacher-image">
                 <div class="teacher-id">T-004</div>
-               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKhB52_lylHvnIA4pq_USV5bVU4sk7srKnfkZLdlqZUBPGLlsY_iiA3b1QBg8nprABx4CBxplbIZVXlHvlgbsm91aHjrQR8T3h-3v2IdDsBpA4Jfjh8iwr0qjPr2jY8KNIt85Pxz3wN-4yU5Q3q3ch470Ijc_RKVKSQ57B01MSo4JTeW3S37AVx9QuhRg/s320/photo_2025-07-25_06-15-58%20%282%29.jpg" alt="Teacher Photo" class="teacher-img">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgKhB52_lylHvnIA4pq_USV5bVU4sk7srKnfkZLdlqZUBPGLlsY_iiA3b1QBg8nprABx4CBxplbIZVXlHvlgbsm91aHjrQR8T3h-3v2IdDsBpA4Jfjh8iwr0qjPr2jY8KNIt85Pxz3wN-4yU5Q3q3ch470Ijc_RKVKSQ57B01MSo4JTeW3S37AVx9QuhRg/s1600/photo_2025-07-25_06-15-58%20%282%29.jpg" alt="Teacher Photo" class="teacher-img">
               </div>
               <div class="teacher-info">
                 <h3>মিসেস শাহনাজ পারভীন</h3>
@@ -2472,7 +2478,7 @@
             <div class="teacher-card">
               <div class="teacher-image">
                 <div class="teacher-id">T-005</div>
-               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8wURXXVvOc3wUl7o0303HibkPeNZkomXyA3ADNNijAzu1s9stise5y5BrRGK_aaFdhou5HScHhlNwHpGRYbNe5bkF17dntRAIL4wht0imaHsZbD0Rv9T2-eij6Vp95zz6XapbSrNWVTCv1xyL8G-BV6mXfuSMpV05TnK5Jv3gRicYTn3WAx0lxIA81DU/s320/photo_2025-07-25_06-15-58%20%285%29.jpg" alt="Teacher Photo" class="teacher-img">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8wURXXVvOc3wUl7o0303HibkPeNZkomXyA3ADNNijAzu1s9stise5y5BrRGK_aaFdhou5HScHhlNwHpGRYbNe5bkF17dntRAIL4wht0imaHsZbD0Rv9T2-eij6Vp95zz6XapbSrNWVTCv1xyL8G-BV6mXfuSMpV05TnK5Jv3gRicYTn3WAx0lxIA81DU/s1600/photo_2025-07-25_06-15-58%20%285%29.jpg" alt="Teacher Photo" class="teacher-img">
               </div>
               <div class="teacher-info">
                 <h3>মোঃ জাহিদ হাসান</h3>
@@ -2493,7 +2499,7 @@
             <div class="teacher-card">
               <div class="teacher-image">
                 <div class="teacher-id">T-006</div>
-               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAghw91AJdBwqUqEhbwW6YR35l0uHouxW6ZPVwqtoYz53zyJr2VZvoq3XHdN_rn2xFcXRXhqikY6emds5iwnwTLfOXh1LCRK3IkA7Cmcg8BAuXL8ie9GIms8yrNPC2MZRrwpF-1rcut-UVbPRFu4k6pmJ7SRNQ1Bm4gZMSxn9Z5Skz75F0Ol__8b3vR-M/s401/photo_2025-07-25_06-15-58%20(3).jpg" alt="Teacher Photo" class="teacher-img">
+               <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAghw91AJdBwqUqEhbwW6YR35l0uHouxW6ZPVwqtoYz53zyJr2VZvoq3XHdN_rn2xFcXRXhqikY6emds5iwnwTLfOXh1LCRK3IkA7Cmcg8BAuXL8ie9GIms8yrNPC2MZRrwpF-1rcut-UVbPRFu4k6pmJ7SRNQ1Bm4gZMSxn9Z5Skz75F0Ol__8b3vR-M/s1600/photo_2025-07-25_06-15-58%20(3).jpg" alt="Teacher Photo" class="teacher-img">
               </div>
               <div class="teacher-info">
                 <h3>মিসেস রুমা </h3>
