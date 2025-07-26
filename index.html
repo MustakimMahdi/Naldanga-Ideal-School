@@ -163,43 +163,35 @@
       line-height: 1.6;
     }
 
-   /* Modern Hero Section with top image and gradient fade */
+    /* Modern Hero Section for Home */
+    /* Modern Hero Section for Home */
 .hero {
-  position: relative;
+ background-color:
+ #0f172a ;
   padding: 6rem 0;
-  color: white;
+  position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
 }
 
-/* Top image only at the upper part, fading into dark background */
+/* ব্যাকগ্রাউন্ড ইমেজ যুক্ত করছি ::before এ */
+.hero {
+  position: relative;
+  color: white;
+  padding: 6rem 0;
+  overflow: hidden;
+ 
+}
+
 .hero::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 300px; /* only upper part */
-  background: linear-gradient(
-      to bottom,
-      rgba(15, 23, 42, 0.5),
-      rgba(30, 41, 59, 0.7)
-    ),
-    url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDAL8bXWamnnYjHvCBLm13Pu1nx6NWCKlnnpWaNXdLDMPnPhJ0VGxjg9S_JVxGE4ixQTm0jEykcKaFvT8_NtiZYHMoZOpG-oe4v6ST-pSkC2f33JpcG36WcmBGRWnIFsm9bu4spG3Q8Fb4xt5DMfjfx555njjztq4i_VUmMrZALpyQiRJwkNf160GMVmw/s1600/photo_2025-07-26_04-40-26.jpg') no-repeat top center;
-  background-size: cover;
-  z-index: 0;
-  opacity: 1;
-}
-
-/* Optional shape pattern layer, if needed */
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff" fill-opacity="0.05" points="0,1000 1000,0 1000,1000"/></svg>');
+  height: 50%; /* শুধুমাত্র উপরের অর্ধেক অংশে ইমেজ থাকবে */
+  background: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgb1Ji1h-ZNxOco1oH-X9Anxjhk4adcGv5JqIXzkZhw7xONvIBM_Zg7PCVS6anZ_2M5CgADNqYjfR61YrU-6gH-jGhINsB0g2DqaMAq3ztVKpdgijB5kSTf837fJ8abkQCx4HMSbr8LJvWcFhsogs7YsIs2sLzCx2HF3T8ksRKN88KJd0Gox6nMxcE66PM/s1600/photo_2025-07-26_06-32-30.jpg') no-repeat center top;
   background-size: cover;
   z-index: 1;
-  pointer-events: none;
 }
 
 .hero-content {
@@ -210,29 +202,38 @@
   margin: 0 auto;
 }
 
-.hero h1 {
-  font-size: 4rem;
-  font-weight: 800;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #ffffff, #e2e8f0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.2;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 3rem;
-  opacity: 0.9;
-  line-height: 1.6;
-}
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #ffffff, #e2e8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.2;
+    }
 
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     .btn-primary {
       background: linear-gradient(135deg, #3b82f6, #1e40af);
       color: white;
