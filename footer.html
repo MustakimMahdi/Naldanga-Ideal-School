@@ -1,0 +1,87 @@
+<!-- footer.html -->
+<footer>
+  <style>
+    /* Footer */
+    footer {
+      background: #1e293b;
+      color: white;
+      padding: 3rem 0;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 1rem;
+      color: #3b82f6;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: #cbd5e1;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-section a:hover {
+      color: #3b82f6;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #334155;
+      padding-top: 2rem;
+      text-align: center;
+      color: #94a3b8;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+      
+       .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+  </style>
+
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>নলডাঙ্গা আইডিয়াল স্কুল</h3>
+          <p>আধুনিক শিক্ষা ব্যবস্থার মাধ্যমে ভবিষ্যতের নেতৃত্ব তৈরি করি।</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>যোগাযোগ</h3>
+          <p>নলডাঙ্গা, সাদুল্লাপুর, গাইবান্ধা</p>
+          <p>ফোন: +৮৮০ ১৭১২-৩৪৫৬৭৮</p>
+          <p>ইমেইল: info@naldangaideal.school</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>দ্রুত লিংক</h3>
+          <a href="#" onclick="showPage('admission')">ভর্তি তথ্য</a><br>
+          <a href="#" onclick="showPage('teachers-staff')">শিক্ষকমণ্ডলী</a><br>
+          <a href="#" onclick="showPage('contact')">যোগাযোগ</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; ২০২৪ নলডাঙ্গা আইডিয়াল স্কুল। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // এখানে থাকবে ফুটারের JavaScript (যদি প্রয়োজন হয়)
+  </script>
+</footer>
