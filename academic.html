@@ -980,6 +980,7 @@
 
 <body>
   <!-- Page Title Section -->
+  <div id="header"></div>
   <section class="page-title">
     <div class="container">
       <h1 class="page-heading"> একাডেমিক বিভাগ</h1>
@@ -1291,7 +1292,7 @@
     </div>
   </div>
 
-
+ <div id="footer"></div>
 
   <script>
     // Sample student results data
@@ -1760,6 +1761,22 @@
         }
       });
     });
+  </script>
+
+  <script>
+    // হেডার লোড
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      });
+
+    // ফুটার লোড
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
   </script>
 </body>
 
