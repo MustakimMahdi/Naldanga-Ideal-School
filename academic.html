@@ -7,6 +7,7 @@
   <title>একাডেমিক - নলডাঙ্গা আইডিয়াল স্কুল</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <style>
     /* ===== Root variables ===== */
     :root {
@@ -1964,5 +1965,19 @@
   window.addEventListener('load', handleHashChange);
   window.addEventListener('hashchange', handleHashChange);
   window.addEventListener('popstate', handleHashChange);
-  </script> 
+  </script>
+  <script>
+  // Prevent Ctrl + '+' or '-' and Ctrl + Mouse Wheel
+  window.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey  e.metaKey) && (e.key === '+'  e.key === '-' || e.key === '=')) {
+      e.preventDefault();
+    }
+  });
+
+  window.addEventListener('wheel', function (e) {
+    if (e.ctrlKey || e.metaKey) {
+      e.preventDefault();
+    }
+  }, { passive: false });
+</script>
 </html>
