@@ -4180,42 +4180,42 @@
    </script>
 <script>
   function showPage(pageId) {
-    // সব পেজ লুকান
+    // সব page লুকিয়ে ফেলুন
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
 
-    // নির্দিষ্ট পেজ দেখান
+    // নির্দিষ্ট page দেখান
     const targetPage = document.getElementById(pageId);
     if (targetPage) {
       targetPage.classList.add('active');
     }
 
-    // নেভিগেশন মেনুর active ক্লাস হালনাগাদ
+    // নেভ মেনুর active ক্লাস হালনাগাদ করুন
     document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.classList.remove('active');
       const href = link.getAttribute('href');
       if (href === '#' + pageId) {
         link.classList.add('active');
+      } else {
+        link.classList.remove('active');
       }
     });
-
-    // ইতিহাসে যোগ করুন
-    history.pushState({ page: pageId }, '', '#' + pageId);
   }
 
-  // লোডের সময় বা ব্যাক বাটনে ক্লিক করলে
+  // পেজ লোড হলে hash দেখে সেকশন দেখান
   window.addEventListener('load', () => {
     const pageId = location.hash.replace('#', '') || 'home';
     showPage(pageId);
     history.replaceState({ page: pageId }, '', '#' + pageId);
   });
 
+  // hash পরিবর্তন হলে পেজ আপডেট করুন
   window.addEventListener('hashchange', () => {
     const pageId = location.hash.replace('#', '') || 'home';
     showPage(pageId);
   });
 
+  // ব্যাক বাটন (popstate) এর জন্য
   window.addEventListener('popstate', (event) => {
-    const pageId = event.state && event.state.page ? event.state.page : 'home';
+    const pageId = event.state?.page || 'home';
     showPage(pageId);
   });
 </script></body>
