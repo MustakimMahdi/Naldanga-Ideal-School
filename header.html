@@ -1,0 +1,207 @@
+<!-- header.html -->
+<header>
+  <style>
+    /* Header Styles */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      color: #1e40af;
+    }
+
+    .logo i {
+      font-size: 32px;
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #4b5563;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: #1e40af;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(20, 54, 165, 0.3);
+    }
+ /* Header Styles */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      color: #1e40af;
+    }
+
+    .logo i {
+      font-size: 32px;
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #4b5563;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: #1e40af;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(20, 54, 165, 0.3);
+    }
+
+ .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .nav-menu {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-menu a {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+
+ .section-header h2 {
+        font-size: 2rem;
+      }
+
+       * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+       /* Responsive Design */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+  </style>
+
+   <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <img src="logo.png"  style="height:80px; vertical-align: middle; margin-right: 8px;">
+          নলডাঙ্গা আইডিয়াল স্কুল
+        </div>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#home"  class="nav-link active">হোম</a></li>
+            <li><a href="#admission"  class="nav-link">এডমিশন</a></li>
+            <li><a href="#teachers-staff"  class="nav-link">শিক্ষক ও কর্মচারী</a></li>
+            <li><a href="#contact"class="nav-link">কন্টাক্ট</a></li>
+            <li><a href="#login"  class="nav-link">লগইন</a></li>
+            <li><a href="academic.html"  class="nav-link">একাডেমি</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>>
+
+  <script>
+   (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9641119ab309a48e',t:'MTc1MzMzNTQ3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+   </script>
+<script>
+  function showPage(pageId) {
+    // সব পেজ হাইড করুন
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+    // নির্দিষ্ট পেজ শো করুন
+    const targetPage = document.getElementById(pageId);
+    if (targetPage) {
+      targetPage.classList.add('active');
+    }
+
+    // সব মেনু বাটন থেকে active ক্লাস সরান এবং নতুনটাতে যোগ করুন
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === '#' + pageId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  // হ্যাশ অনুযায়ী পেজ শো
+  function handleHashChange() {
+    const pageId = location.hash.replace('#', '') || 'home';
+    showPage(pageId);
+  }
+
+  // লোড, হ্যাশচেঞ্জ এবং ব্যাক/ফরোয়ার্ড হ্যান্ডল করুন
+  window.addEventListener('load', handleHashChange);
+  window.addEventListener('hashchange', handleHashChange);
+  window.addEventListener('popstate', handleHashChange);
+  </script>
+</header>
