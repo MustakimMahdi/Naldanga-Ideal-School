@@ -1964,11 +1964,11 @@
         </div>
         <nav>
           <ul class="nav-menu">
-            <li><a href="#" onclick="showPage('home')" class="nav-link active">হোম</a></li>
-            <li><a href="#" onclick="showPage('admission')" class="nav-link">এডমিশন</a></li>
-            <li><a href="#" onclick="showPage('teachers-staff')" class="nav-link">শিক্ষক ও কর্মচারীবৃন্দ</a></li>
-            <li><a href="#" onclick="showPage('contact')" class="nav-link">কন্টাক্ট</a></li>
-            <li><a href="#" onclick="showPage('login')" class="nav-link">লগইন</a></li>
+            <li><a href="#home" onclick="showPage('home')" class="nav-link active">হোম</a></li>
+            <li><a href="#admission" onclick="showPage('admission')" class="nav-link">এডমিশন</a></li>
+            <li><a href="#teachers-staff" onclick="showPage('teachers-staff')" class="nav-link">শিক্ষক ও কর্মচারীবৃন্দ</a></li>
+            <li><a href="#contact" onclick="showPage('contact')" class="nav-link">কন্টাক্ট</a></li>
+            <li><a href="#login" onclick="showPage('login')" class="nav-link">লগইন</a></li>
           </ul>
         </nav>
       </div>
@@ -4176,6 +4176,46 @@
       }
     });
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9641119ab309a48e',t:'MTc1MzMzNTQ3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9641119ab309a48e',t:'MTc1MzMzNTQ3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+  
+ // পেজ দেখানোর জন্য ফাংশন
+    function showPage(pageId) {
+      // সব পেজ হাইড করে দিন
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
 
+      // নির্দিষ্ট পেজটি দেখান
+      const targetPage = document.getElementById(pageId);
+      if (targetPage) {
+        targetPage.classList.add('active');
+      }
+
+      // URL এ হ্যাশ যোগ করে ইতিহাসে যোগ করুন
+      history.pushState({ page: pageId }, '', '#' + pageId);
+    }
+
+    // ব্যাক/ফরোয়ার্ড বাটনে ক্লিক করলে পেজ পরিবর্তন করুন
+    window.onpopstate = function(event) {
+      const pageId = event.state && event.state.page ? event.state.page : 'home';
+      // সব পেজ হাইড করে দিন
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+
+      // আগের পেজটি দেখান
+      const targetPage = document.getElementById(pageId);
+      if (targetPage) {
+        targetPage.classList.add('active');
+      }
+    };
+
+    // পেজ লোড হলে URL এর হ্যাশ দেখে পেজ লোড করুন
+    window.addEventListener('load', () => {
+      const initialPage = location.hash.replace('#', '') || 'home';
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      const targetPage = document.getElementById(initialPage);
+      if (targetPage) {
+        targetPage.classList.add('active');
+      }
+      // initial state add করে দিচ্ছি
+      history.replaceState({ page: initialPage }, '', '#' + initialPage);
+    }); 
+  </script></body>
+</html>
