@@ -4180,17 +4180,17 @@
    </script>
 <script>
   function showPage(pageId) {
-    // সব page লুকিয়ে ফেলুন
+    // সব পেজ হাইড করুন
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
 
-    // নির্দিষ্ট page দেখান
+    // নির্দিষ্ট পেজ শো করুন
     const targetPage = document.getElementById(pageId);
     if (targetPage) {
       targetPage.classList.add('active');
     }
 
-    // নেভ মেনুর active ক্লাস হালনাগাদ করুন
-    document.querySelectorAll('.nav-menu a').forEach(link => {
+    // সব মেনু বাটন থেকে active ক্লাস সরান এবং নতুনটাতে যোগ করুন
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
       const href = link.getAttribute('href');
       if (href === '#' + pageId) {
         link.classList.add('active');
@@ -4200,23 +4200,15 @@
     });
   }
 
-  // পেজ লোড হলে hash দেখে সেকশন দেখান
-  window.addEventListener('load', () => {
+  // হ্যাশ অনুযায়ী পেজ শো
+  function handleHashChange() {
     const pageId = location.hash.replace('#', '') || 'home';
     showPage(pageId);
-    history.replaceState({ page: pageId }, '', '#' + pageId);
-  });
+  }
 
-  // hash পরিবর্তন হলে পেজ আপডেট করুন
-  window.addEventListener('hashchange', () => {
-    const pageId = location.hash.replace('#', '') || 'home';
-    showPage(pageId);
-  });
-
-  // ব্যাক বাটন (popstate) এর জন্য
-  window.addEventListener('popstate', (event) => {
-    const pageId = event.state?.page || 'home';
-    showPage(pageId);
-  });
+  // লোড, হ্যাশচেঞ্জ এবং ব্যাক/ফরোয়ার্ড হ্যান্ডল করুন
+  window.addEventListener('load', handleHashChange);
+  window.addEventListener('hashchange', handleHashChange);
+  window.addEventListener('popstate', handleHashChange);
 </script></body>
 </html>
