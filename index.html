@@ -4179,7 +4179,6 @@
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9641119ab309a48e',t:'MTc1MzMzNTQ3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
    </script>
 <script>
-  // সব সেকশন লুকিয়ে নির্দিষ্ট সেকশন দেখানোর ফাংশন
   function showPage(pageId) {
     // সব পেজ লুকান
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -4189,22 +4188,32 @@
     if (targetPage) {
       targetPage.classList.add('active');
     }
+
+    // নেভিগেশন মেনুর active ক্লাস হালনাগাদ
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.classList.remove('active');
+      const href = link.getAttribute('href');
+      if (href === '#' + pageId) {
+        link.classList.add('active');
+      }
+    });
+
+    // ইতিহাসে যোগ করুন
+    history.pushState({ page: pageId }, '', '#' + pageId);
   }
 
-  // পেজ লোড হলে hash দেখে লোড করুন
+  // লোডের সময় বা ব্যাক বাটনে ক্লিক করলে
   window.addEventListener('load', () => {
     const pageId = location.hash.replace('#', '') || 'home';
     showPage(pageId);
     history.replaceState({ page: pageId }, '', '#' + pageId);
   });
 
-  // hash পরিবর্তন হলে পেজ দেখান
   window.addEventListener('hashchange', () => {
     const pageId = location.hash.replace('#', '') || 'home';
     showPage(pageId);
   });
 
-  // ব্যাক বাটন (history navigation) কাজ করার জন্য
   window.addEventListener('popstate', (event) => {
     const pageId = event.state && event.state.page ? event.state.page : 'home';
     showPage(pageId);
