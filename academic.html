@@ -1,12 +1,10 @@
 
-<!-- আপনার existing header এর পরে এই কোডটি paste করুন -->
-<!-- শুধু <body> ট্যাগের পরের অংশ থেকে </body> ট্যাগের আগের অংশ পর্যন্ত -->
-
-<a href="academic.html">একাডেমিক বিভাগ</a>
 <!DOCTYPE html>
 <html lang="bn">
+  
 
 <head>
+  <div id="header"></div>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>একাডেমিক পেজ</title>
@@ -980,7 +978,7 @@
 
 <body>
   <!-- Page Title Section -->
-  <div id="header"></div>
+
   <section class="page-title">
     <div class="container">
       <h1 class="page-heading"> একাডেমিক বিভাগ</h1>
@@ -1292,7 +1290,7 @@
     </div>
   </div>
 
- <div id="footer"></div>
+
 
   <script>
     // Sample student results data
@@ -1778,6 +1776,19 @@
         document.getElementById("footer").innerHTML = data;
       });
   </script>
+
+  <script>
+  // ব্যাক প্রেস হ্যান্ডলিং
+  window.addEventListener('popstate', function () {
+    // যদি ব্যাক চাপা হয়, index.html এ নিয়ে যাবে
+    window.location.href = "index.html#home";
+  });
+
+  // ব্রাউজার হিস্টোরিতে একটি স্টেট পুশ করি
+  history.pushState({}, '');
+</script>\
+
+   <div id="footer"></div>
 </body>
 
 </html>
