@@ -1,18 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="bn">
-  
 
 <head>
- 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>একাডেমিক পেজ</title>
+  <title>একাডেমিক - নলডাঙ্গা আইডিয়াল স্কুল</title>
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <style>
-
-
     /* ===== Root variables ===== */
     :root {
       --primary-color: #3b82f6;
@@ -80,51 +75,108 @@
 
     /* ===== Container ===== */
     .container {
-      max-width: var(--max-width);
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 1rem 1.25rem;
+      padding: 0 20px;
     }
 
-    /* ===== Page Title ===== */
-    .page-title {
-      background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    /* ===== Header Styles ===== */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      color: #1e40af;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #4b5563;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: #1e40af;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(20, 54, 165, 0.3);
+    }
+
+    /* ===== Page Hero Section ===== */
+    .page-hero {
+      padding: 6rem 0;
       color: white;
-      padding: 2rem 0;
       text-align: center;
-      margin-bottom: 3rem;
       position: relative;
       overflow: hidden;
-      animation: fadeInDown 0.8s ease-out;
     }
 
-    .page-title::before {
+    .page-hero::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; 
+      left: 0; 
+      right: 0; 
       bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-      opacity: 0.3;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff" fill-opacity="0.05" points="0,1000 1000,0 1000,1000"/></svg>');
+      background-size: cover;
     }
 
-    .page-heading {
-      color: white;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    .page-hero-content {
       position: relative;
       z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    .page-subtitle {
+    .page-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff, #e2e8f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      line-height: 1.6;
       color: rgba(255, 255, 255, 0.9);
-      font-size: 1.1rem;
-      margin: 0;
-      font-weight: 500;
-      position: relative;
-      z-index: 2;
+    }
+
+    /* Academic Hero Specific Color */
+    .academic-hero {
+      background: linear-gradient(135deg, #1e40af, #3b82f6);
     }
 
     /* ===== Section Header ===== */
@@ -376,8 +428,6 @@
       font-weight: 600;
       font-size: 0.9rem;
     }
-
-
 
     /* ===== Student Results Section ===== */
     .results-container {
@@ -672,70 +722,6 @@
       margin: 0;
     }
 
-    /* ===== Responsive Design ===== */
-    @media (max-width: 768px) {
-      .container {
-        padding: 1rem;
-      }
-
-      .header h1 {
-        font-size: 2rem;
-      }
-
-      .section-header {
-        font-size: 1.5rem;
-      }
-
-      .notice-board {
-        padding: 1.5rem;
-      }
-
-      .syllabus-card {
-        padding: 1.5rem 1rem;
-      }
-
-      .syllabus-card i {
-        font-size: 3rem;
-      }
-
-      .search-form {
-        grid-template-columns: 1fr;
-      }
-
-      .result-header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .student-details {
-        justify-content: center;
-      }
-
-      .result-summary {
-        gap: 3rem;
-      }
-
-      .subjects-table {
-        padding: 1rem;
-        overflow-x: auto;
-      }
-
-      .subjects-table table {
-        min-width: 500px;
-      }
-
-      .result-actions {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .action-btn {
-        width: 100%;
-        max-width: 200px;
-        justify-content: center;
-      }
-    }
-
     /* ===== Notice Modal ===== */
     .modal-overlay {
       position: fixed;
@@ -857,6 +843,43 @@
       line-height: 1.6;
     }
 
+    /* ===== Footer Styles ===== */
+    footer {
+      background: #1e293b;
+      color: white;
+      padding: 3rem 0;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      color: #3b82f6;
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: #cbd5e1;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-section a:hover {
+      color: #3b82f6;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #334155;
+      padding-top: 2rem;
+      text-align: center;
+      color: #94a3b8;
+    }
+
     /* ===== Animations ===== */
     @keyframes fadeInDown {
       from {
@@ -899,15 +922,6 @@
       to {
         opacity: 1;
         transform: translateX(0);
-      }
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
       }
     }
 
@@ -975,76 +989,22 @@
     .modal-content::-webkit-scrollbar-thumb:hover {
       background: var(--primary-dark);
     }
-/* Header Styles */
-    header {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
 
-    .header-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 24px;
-      font-weight: 800;
-      color: #1e40af;
-    }
-
-    .logo i {
-      font-size: 32px;
-      background: linear-gradient(135deg, #1e40af, #3b82f6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-
-    .nav-menu a {
-      text-decoration: none;
-      color: #4b5563;
-      font-weight: 600;
-      padding: 12px 24px;
-      border-radius: 50px;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .nav-menu a:hover,
-    .nav-menu a.active {
-      color: #1e40af;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(20, 54, 165, 0.3);
-    }
-
- .header-content {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem 0;
+    /* ===== Responsive Design ===== */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1rem;
       }
 
-      .logo {
-        font-size: 20px;
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
       }
 
       .nav-menu {
-        gap: 0.5rem;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 0.5rem;
       }
 
       .nav-menu a {
@@ -1052,31 +1012,86 @@
         font-size: 14px;
       }
 
- .section-header h2 {
-        font-size: 2rem;
+      .page-hero {
+        padding: 4rem 0;
       }
 
-       * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-       /* Responsive Design */
-    @media (max-width: 1024px) {
-      .hero h1 {
+      .page-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .page-hero p {
+        font-size: 1rem;
+      }
+
+      .section-header {
+        font-size: 1.5rem;
+      }
+
+      .notice-board {
+        padding: 1.5rem;
+      }
+
+      .syllabus-card {
+        padding: 1.5rem 1rem;
+      }
+
+      .syllabus-card i {
         font-size: 3rem;
       }
-    
+
+      .search-form {
+        grid-template-columns: 1fr;
+      }
+
+      .result-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .student-details {
+        justify-content: center;
+      }
+
+      .result-summary {
+        gap: 3rem;
+      }
+
+      .subjects-table {
+        padding: 1rem;
+        overflow-x: auto;
+      }
+
+      .subjects-table table {
+        min-width: 500px;
+      }
+
+      .result-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .action-btn {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <!-- Page Title Section -->
-<header>
-<div class="container">
+  <!-- Header Start -->
+  <header>
+    <div class="container">
       <div class="header-content">
         <div class="logo">
-          <img src="logo.png"  style="height:80px; vertical-align: middle; margin-right: 8px;">
+          <img src="logo.png" style="height:80px; vertical-align: middle; margin-right: 8px;" alt="School Logo">
           নলডাঙ্গা আইডিয়াল স্কুল
         </div>
         <nav>
@@ -1091,19 +1106,21 @@
         </nav>
       </div>
     </div>
-</header>
+  </header>
 
-  
-  <section class="page-title">
+  <!-- Page Hero Section -->
+  <section class="page-hero academic-hero">
     <div class="container">
-      <h1 class="page-heading"> একাডেমিক বিভাগ</h1>
-      <p class="page-subtitle">শিক্ষার্থীদের একাডেমিক তথ্য ও সেবা</p>
+      <div class="page-hero-content">
+        <h1> একাডেমিক বিভাগ</h1>
+        <p>শিক্ষার্থীদের একাডেমিক তথ্য ও সেবা - সিলেবাস, ফলাফল, নোটিশ এবং শিক্ষা সংস্থান</p>
+      </div>
     </div>
   </section>
 
   <!-- Notice Board Section -->
   <section class="container">
-    <h2 class="section-header">নোটিশ বোর্ড</h2>
+    <h2 class="section-header"> নোটিশ বোর্ড</h2>
     <div class="notice-board">
       <ul>
         <li class="notice-item" onclick="openNotice('exam-notice')">
@@ -1137,7 +1154,7 @@
           <i class="ri-user-line notice-icon"></i>
           <div class="notice-content">
             <div class="notice-title">মাসিক অভিভাবক সভা ও ফলাফল বিতরণ</div>
-            <div class="notice-date">১২ ডিসেম্বর ২০২ৄ 
+            <div class="notice-date">১২ ডিসেম্বর ২০২৪ 
               <span class="notice-priority priority-medium">গুরুত্বপূর্ণ</span>
             </div>
           </div>
@@ -1236,7 +1253,7 @@
 
   <!-- Student Results Section -->
   <section class="container">
-    <h2 class="section-header"> শিক্ষার্থীদের ফলাফল</h2>
+    <h2 class="section-header">শিক্ষার্থীদের ফলাফল</h2>
     <div class="results-container">
       <div class="result-search-card">
         <div class="search-header">
@@ -1339,7 +1356,7 @@
 
   <!-- Resources Section -->
   <section class="container">
-    <h2 class="section-header"> শিক্ষা সংস্থান</h2>
+    <h2 class="section-header">শিক্ষা সংস্থান</h2>
     <div class="resources-grid">
       <div class="resource-card">
         <i class="ri-download-cloud-line"></i>
@@ -1405,7 +1422,32 @@
     </div>
   </div>
 
-
+  <!-- Footer Start -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>নলডাঙ্গা আইডিয়াল স্কুল</h3>
+          <p>আধুনিক শিক্ষা ব্যবস্থার মাধ্যমে ভবিষ্যতের নেতৃত্ব তৈরি করি।</p>
+        </div>
+        <div class="footer-section">
+          <h3>যোগাযোগ</h3>
+          <p>নলডাঙ্গা, সাদুল্লাপুর, গাইবান্ধা</p>
+          <p>ফোন: +৮৮০ ১৭১২-৩৪৫৬৭৮</p>
+          <p>ইমেইল: info@naldangaideal.school</p>
+        </div>
+        <div class="footer-section">
+          <h3>দ্রুত লিংক</h3>
+          <a href="index.html">হোম</a><br>
+          <a href="academic.html">একাডেমিক</a><br>
+          <a href="#contact">যোগাযোগ</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; ২০২৫ নলডাঙ্গা আইডিয়াল স্কুল। সকল অধিকার সংরক্ষিত।</p>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Sample student results data
@@ -1583,7 +1625,7 @@
           </style>
         </head>
         <body>
-          <h1 style="text-align: center; color: #1e40af;">বাংলাদেশ আদর্শ উচ্চ বিদ্যালয়</h1>
+          <h1 style="text-align: center; color: #1e40af;">নলডাঙ্গা আইডিয়াল স্কুল</h1>
           <h2 style="text-align: center; margin-bottom: 30px;">পরীক্ষার ফলাফল</h2>
           ${resultContent}
         </body>
@@ -1603,7 +1645,7 @@
       const gpa = document.getElementById('gpaValue').textContent;
       const grade = document.getElementById('gradeValue').textContent;
 
-      let resultText = `বাংলাদেশ আদর্শ উচ্চ বিদ্যালয়\nপরীক্ষার ফলাফল\n\n`;
+      let resultText = `নলডাঙ্গা আইডিয়াল স্কুল\nপরীক্ষার ফলাফল\n\n`;
       resultText += `শিক্ষার্থীর নাম: ${studentName}\n`;
       resultText += `${studentRoll}\n`;
       resultText += `${studentClass}\n`;
@@ -1875,10 +1917,8 @@
       });
     });
   </script>
-
- 
-
-  <script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'965c91f583cea48e',t:'MTc1MzYyMzg1Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>
   // ব্যাক প্রেস হ্যান্ডলিং
   window.addEventListener('popstate', function () {
     // যদি ব্যাক চাপা হয়, index.html এ নিয়ে যাবে
@@ -1925,6 +1965,4 @@
   window.addEventListener('hashchange', handleHashChange);
   window.addEventListener('popstate', handleHashChange);
   </script> 
-</body>
-
 </html>
